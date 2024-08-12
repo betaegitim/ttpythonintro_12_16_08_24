@@ -36,3 +36,11 @@ d. Metnin başında ve sonunda yer alan boşlukları temizleyen kod
 e. split ile bölümlenmiş parçaları ";" ile birleştiren kod
 f. "Benim Adım {} Yaşım {}" şeklinde belirlenmiş metin içerisinde isim ve yaş bilgisini giren kod
 """
+var1.replace("a","e")
+var1.upper()
+var1.split()
+var1.strip()
+";".join(var1.split())
+
+
+

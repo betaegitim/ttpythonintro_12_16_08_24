@@ -36,3 +36,33 @@ d. Metnin başında ve sonunda yer alan boşlukları temizleyen kod
 e. split ile bölümlenmiş parçaları ";" ile birleştiren kod
 f. "Benim Adım {} Yaşım {}" şeklinde belirlenmiş metin içerisinde isim ve yaş bilgisini giren kod
 """
+
+var1 = "Python Programlama Dili"
+
+#a
+var1 = var1.replace("a","e")
+
+#b
+var1 = var1.upper()
+print(var1)
+
+#c
+var1 = var1.split()
+print(var1)
+
+#d
+var1 = var1.strip()
+print(var1)
+
+#e 
+var1 = ";".join(var1.split())
+print(var1)
+
+#f
+var1 = "Benim Adım {} Yaşım {}"
+var1 = var1.format("Onur","35")
+print(var1)
+
+
+
+
