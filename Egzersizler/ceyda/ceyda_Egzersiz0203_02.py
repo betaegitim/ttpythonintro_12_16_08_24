@@ -6,3 +6,10 @@ liste = [24,35,65,67,68,90,86]
 4. listenin sonuna [1,2,3] listesini genişletelim
 """
 
+
+liste = [24,35,65,67,68,90,86]
+liste.insert(2,1000)
+print(liste)
+
+
+

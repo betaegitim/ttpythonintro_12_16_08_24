@@ -3,6 +3,7 @@
 Linkler:
 
 * repl.it
+* https://www.sololearn.com/en/learn/courses/le-python
 * 
 
 Kurulum Esnasında 

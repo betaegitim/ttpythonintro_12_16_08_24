@@ -5,4 +5,11 @@ liste = [24,35,65,67,68,90,86]
 3. listenin sonuna [1,2,3] listesini ekleyelim
 4. listenin sonuna [1,2,3] listesini genişletelim
 """
-
+liste.insert(2,1000)
+print(liste)
+liste.append("100")
+print(liste)
+liste.append([1,2,3])
+print(liste)
+liste.extend([1,2,3])
+print(liste)
