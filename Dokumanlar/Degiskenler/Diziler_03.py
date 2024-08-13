@@ -183,7 +183,7 @@ yol = "C:\\talat\\nalan\\buket.html"
 print(yol)
 
 # %%
-yol = r"C:\talat\nalan\buket.html"
+yol = r"C:\talat\nalan\buket.html" # raw string
 print(yol)
 
 # %% [markdown]
@@ -237,6 +237,235 @@ a = "Ali"
 b = "Veli"
 var1 = f"Merhaba Sayın {a} {b}" # string interpolation
 var1
+
+# %% [markdown]
+# ## list
+
+# %%
+liste = []
+print(type(liste))
+
+# %%
+liste = [1,2,3,[1,2,3],"TT",(1,2,3),print]
+liste[-1]("Merhaba")
+
+# %% [markdown]
+# ---------------- 
+# index,rindex => (sadece str)
+
+# %%
+var1 = "TÜRK TELEKOM"
+var1.index("T")
+
+# %%
+var1.rindex("T")
+
+# %% [markdown]
+# --------------------------------
+
+# %% [markdown]
+# ### Ekleme
+
+# %% [markdown]
+# * `+`
+# * insert
+# * append
+# * extend
+
+# %%
+l1 = ["a","b"]
+l2 = ["c","d"]
+l1 + l2 # concatenate
+
+# %%
+l1 = ["a","b","c","a"]
+#      0   1   2   3
+l1.insert(1,"B")
+l1
+
+# %%
+l1 = ["a","b","c","a"]
+#      0   1   2   3
+l1.append("B")
+l1
+
+# %%
+l1 = ["a","b","c","a"]
+l1 = l1 + ["B"]
+l1
+
+# %%
+l1 = ["a","b","c","a"]
+l1.append(["B"]) # liste olarak ekler
+l1
+
+# %%
+l1 = ["a","b","c","a"]
+l1.append(["B",2,3,4,5]) # liste olarak ekler
+l1
+
+# %%
+l1 = ["a","b","c","a"]
+l1.extend(["B",2,3,4,5]) # genişletme işlemi için kullanıldı
+l1
+
+# %% [markdown]
+# ### Güncelleme
+
+# %%
+l1 = ["a","b","c"]
+#      0   1   2
+l1[1] = "A"
+l1
+
+# %% [markdown]
+# ###  Silme
+# * pop
+# * remove
+# * del
+
+# %%
+# pop 
+l1 = ["a","b","c"]
+print(l1.pop()) # => c yi çıktı olarak verir
+print(l1)
+
+# %%
+# pop 
+l1 = ["a","b","c"]
+#      0   1   2
+print(l1.pop(1)) # => b yi çıktı olarak verir
+print(l1)
+
+# %%
+# remove
+l1 = ["a","b","c","a","c","b"]
+l1.remove("a")
+print(l1)
+
+# %%
+l1 = ["a","b","c","a","c","b"]
+del l1[1]
+l1
+
+# %% [markdown]
+# ### Diğerleri
+# * count
+# * index
+# * copy
+# * sort
+# * reverse
+
+# %%
+l1 = ["a","b","c","a","c","b"]
+l1.count("a")
+
+# %%
+l1 = ["a","b","c","a","c","b"]
+l1.index("a")
+
+# %%
+a = [1,2,3]
+b = a # aynı nesne
+b.insert(0,500)
+print(a,b)
+print(id(a),id(b))
+
+# %%
+a = [1,2,3]
+b = a # aynı nesne
+b.insert(0,500)
+print(a,b)
+
+# %%
+a = [1,2,3]
+b = a.copy() # farklı nesne 
+b.insert(0,500)
+print(a,b)
+print(id(a),id(b))
+
+# %%
+a = 258
+b = 258
+print(id(a),id(b))
+
+# %%
+a = b = 258
+print(id(a),id(b))
+
+# %%
+l1 = [98,23,12]
+l1.sort()
+l1
+
+# %%
+l1 = [98,23,12]
+l1.sort(reverse=True)
+print(l1)
+
+# %%
+l1 = [98,23,12]
+l1.reverse()
+l1
+
+# %%
+l1 = [98,23,12]
+print(l1[::-1])
+l1
+
+# %% [markdown]
+# ## tuple
+
+# %%
+demet = (1,2,3,[1,2,3],"TT",(1,2,3),print)
+
+# %%
+demet.index(2)
+
+# %%
+demet.index([1,2,3])
+
+# %%
+demet = (1)
+print(type(demet))
+
+# %%
+demet = (1,)
+print(type(demet))
+
+# %%
+demet = 1,2,3,[1,2,3],"TT",(1,2,3),print
+print(type(demet))
+
+# %%
+def fonk(*args):
+    print(type(args))
+fonk(1,2,3,4)
+
+# %%
+def fonk(*args):
+    print(type(args))
+    return 1,2
+fonk(1,2,3,4)
+print(type(fonk(1,2,2,3)))
+
+# %%
+print(type(input("Giriş:")))
+
+# %%
+int("123")
+
+# %%
+list("123")
+
+# %%
+tuple("123")
+
+# %%
+set("1232")
+
+# %%
+a = 2;demet = 1,2;demet;print(a);3
 
 # %%
 

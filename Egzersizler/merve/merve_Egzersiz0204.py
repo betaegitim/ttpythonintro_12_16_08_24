@@ -8,6 +8,9 @@ Beklenen Çıktı : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
 """
 
 
+dict4= {**dict1, **dict2, **dict3}
+print(dict4)
+
 
 
 """sozluk ={1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
@@ -15,13 +18,16 @@ Beklenen Çıktı : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
 Beklenen Çıktı :(6,60)
 """
 
+sozluk.popitem()
+
 
 
 """dict1={1:10, 2:20}
 3. Yukarıdaki sözlüğe bir eleman ekleyiniz. 
 Beklenen Çıktı :{1:10, 2:20, 3:30}
 """
-
+dict1[3]=30
+dict1
 
 """liste=[1,2,3,4,5]
 4. 
