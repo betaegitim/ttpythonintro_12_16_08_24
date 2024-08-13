@@ -48,3 +48,5 @@ print(var1.split())
 print(var1.strip())
 #e.
 print(";".join(satir.split()))
+
+
