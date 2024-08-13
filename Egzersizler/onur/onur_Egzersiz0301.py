@@ -14,3 +14,12 @@ yukarıda yer alan kod örneğini dikkate alarak kullanıcı tarafından girilen
 oy kullanabileceğini ekrana yazdıran bir python kodu yazınız.
 """
 
+sayi = input("Sayıyı Giriniz:") # str
+if sayi and sayi.isdigit():
+    sayi = int(sayi)
+    if sayi >= 18:
+        print("oy kullanabilir")
+    else:
+        print("oy kullanamaz")
+else:
+    print("Giriş Hatası")
