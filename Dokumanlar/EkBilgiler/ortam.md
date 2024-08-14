@@ -16,3 +16,7 @@
 * Ortamı Kapatmak İçin
 `deactivate`
 
+## Kütüphane Listeleri Almak
+* pip freeze > requirements.txt
+## Kütüphane Listesinden Kurmak
+* pip install -r requirements.txt
