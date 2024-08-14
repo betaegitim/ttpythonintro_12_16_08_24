@@ -29,9 +29,10 @@ aci2 = input("2. Açıyı Giriniz:")
 if aci1.isdigit() and aci2.isdigit():
     aci1,aci2 = int(aci1),int(aci2)
     aciList = [180-(aci1+aci2),aci1,aci2]
-
+    print("aciList",aciList)
     if 178 >= aciList[0] > 0:
-        print("")
+        print("aciKume",set(aciList))
+        print("aciSayisi",len(set(aciList)))
         aciSayisi = len(set(aciList))
         if aciSayisi == 2:
             print("İkizkenar Üçgen")
@@ -45,4 +46,3 @@ if aci1.isdigit() and aci2.isdigit():
         print("Açı Hatası")
 else:
     print("Giriş Hatası")
-
