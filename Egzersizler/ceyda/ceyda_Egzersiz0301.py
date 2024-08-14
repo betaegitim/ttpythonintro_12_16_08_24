@@ -23,3 +23,7 @@ Dik üçgen
 Eşkenar üçgen
 Çeşitkenar üçgen
 """
+
+aci1 = input("1. Açıyı Giriniz:")
+aci2 = input("2. Açıyı Giriniz:")
+if aci1==45 and aci2==45:

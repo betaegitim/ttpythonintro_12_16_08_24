@@ -24,3 +24,12 @@ Eşkenar üçgen
 Çeşitkenar üçgen
 """
 
+aci1 = input("1. Açıyı Giriniz:")
+aci2 = input("2. Açıyı Giriniz:")
+
+if (aci1==aci2):
+    print("İkizkenar üçgen")
+elif(aci1 == aci2) and ((aci1+aci2)==90):
+    print("İkizkenar Dik Üçgen")
+elif (aci1==aci2==60):
+    print("Eşkenar Üçgen")

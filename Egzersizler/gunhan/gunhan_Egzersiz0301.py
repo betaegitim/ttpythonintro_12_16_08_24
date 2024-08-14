@@ -23,3 +23,13 @@ Dik üçgen
 Eşkenar üçgen
 Çeşitkenar üçgen
 """
+aci1 = input("Birinci acıyı giriniz:")
+aci2 = input("ikinci acıyır giriniz:")
+if aci1 == aci2 == 45:
+    print("Bu üçgen ikizkenar dik üçgen")
+elif aci1 == 30 and aci2 == 60:
+    print ("Bu üçgen eşitkenar dik üçgen")
+elif aci1 == aci2 == 60:
+    print ("Bu üçgen eşitkenar üçgen")
+else:
+    print("Bu üçgen çeşitkenar üçgen:")
