@@ -10,3 +10,4 @@ print(toplam)
 ###################
 yukarıda yer alan kaynak koddan faydalanarak girilen sayının faktoriyelini hesaplayan kodu yazalım
 """
+
