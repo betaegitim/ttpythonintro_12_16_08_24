@@ -14,12 +14,13 @@ yukarıda yer alan kod örneğini dikkate alarak kullanıcı tarafından girilen
 oy kullanabileceğini ekrana yazdıran bir python kodu yazınız.
 """
 
-sayi = input("Sayıyı Giriniz:") # str
-if sayi and sayi.isdigit():
-    sayi = int(sayi)
-    if sayi >= 18:
-        print("oy kullanabilir")
-    else:
-        print("oy kullanamaz")
-else:
-    print("Giriş Hatası")
+"""
+aci1 = input("1. Açıyı Giriniz:")
+aci2 = input("2. Açıyı Giriniz:")
+Bir üçgenin iç açılarından yola çıkarak o üçgenin türünü ekrana yazdıran python programını yazalım.
+İkizkenar üçgen
+Dik üçgen
+Eşkenar üçgen
+Çeşitkenar üçgen
+"""
+

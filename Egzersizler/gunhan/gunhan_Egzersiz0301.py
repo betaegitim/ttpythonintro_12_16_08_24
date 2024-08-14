@@ -14,8 +14,12 @@ yukarıda yer alan kod örneğini dikkate alarak kullanıcı tarafından girilen
 oy kullanabileceğini ekrana yazdıran bir python kodu yazınız.
 """
 
-yas = input("yaşınızı giriniz:")
-if yas >= 18 :
-    print("Oy kullanabilirsiniz")
-else:
-    print("yaşınız küçük")   
+"""
+aci1 = input("1. Açıyı Giriniz:")
+aci2 = input("2. Açıyı Giriniz:")
+Bir üçgenin iç açılarından yola çıkarak o üçgenin türünü ekrana yazdıran python programını yazalım.
+İkizkenar üçgen
+Dik üçgen
+Eşkenar üçgen
+Çeşitkenar üçgen
+"""
