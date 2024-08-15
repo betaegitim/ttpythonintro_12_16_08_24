@@ -43,3 +43,32 @@ def sifreUret(uzunluk): # fonksiyon tanımlanıyor. uzunluk şifre uzunluğunu 
     else:
         return sifre
     # şifre dışarıya aktarılıyor
+
+
+
+"""
+
+TC Kimlik No Doğrulama Algoritması
+TC Kimlik numaraları, her Türk Vatandaşına doğumunda verilen 11 karakterli bir sayıdır ve benzersizdir. 
+Yani aynı TC Kimlik numarasından bir tane daha yoktur. Ben önceleri hep bir sıraya göre gittiklerini düşünüyordum. 
+Ancak bir gün ailemden iki kişinin TC Kimlik numaraların benzerlik gösterdiğini fark ettim. 
+Bu benzerlik ilk 1,2,3 hane ile 7,8,9 hanelerin aynı olmasıydı. 
+O gün aslında sıradan gitmediğini belirli bir algoritmaya göre verildiğini anlamıştım.
+
+Şimdi gelelim bu TC No Doğrulama algoritmasına.
+
+
+
+TC Kimlik No Doğrulama Algoritması
+Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması gerekiyor.
+
+1  TC Kimlik Numaraları 11 karakter olmak zorundadır.
+
+2  Her hanesi bir rakam olmaldır.
+
+3  İlk hanesi 0 (sıfır) olamaz
+
+4  1, 3, 5, 7, 9 basamaklarının toplamının 7 katından, 2, 4, 6, 8 basamaklarının toplamını çıkarttığımızda elde ettiğimiz sonucun 10’a bölümünden kalan sayı (MOD10)  10. basamaktaki sayıyı vermelidir.
+
+5  İlk 10 hanenin toplamından elde edilen sonucun 10’a bölümünden kalan sayı (MOD10) 11. basamaktaki sayıyı vermelidir.
+"""
