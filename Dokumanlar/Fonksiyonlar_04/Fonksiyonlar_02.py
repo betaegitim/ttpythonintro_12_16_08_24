@@ -3,6 +3,7 @@
 # * lambda
 # * global,nonlocal
 # * gömülü fonksiyonlar
+# * recursion
 
 # %% [markdown]
 # ## Lambda
@@ -213,6 +214,7 @@ sorted(liste,key=lambda a:cevrim.get(a[0])) # 0 2 7
 # 3. IBAN Kontrol
 
 # %%
+# 1
 from string import ascii_lowercase,ascii_uppercase,digits,punctuation
 import random as rnd
 liste = [ascii_lowercase,ascii_uppercase,digits,punctuation]
@@ -242,6 +244,7 @@ def sifreUret(uzunluk): # fonksiyon tanımlanıyor. uzunluk şifre uzunluğunu 
     return sifre
     # şifre dışarıya aktarılıyor
 sifreUret(10)
+
 # %%
 bHarf = kHarf = rakam = noktalama = False
 password = "sO2:F5<9?1" # çalışmak için örnek şifre
@@ -259,6 +262,7 @@ for item in password: # şifrenin her karakteri için çalışan döngü
         break
 else: # şartlar sağlanmadan break olmadan döngü bitti mi
     print("Şifre Uygun Değil")
+
 # %%
 bHarf = kHarf = rakam = noktalama = False
 password = "sO2F591"
@@ -280,6 +284,7 @@ else:
     else:
         # şartlar sağlanmadan break olmadan döngü bitti mi
         print("Şifre Uygun Değil")
+
 # %%
 def sifreKontrol(password):
     bHarf = kHarf = rakam = noktalama = False
@@ -295,6 +300,7 @@ def sifreKontrol(password):
             noktalama = True
     return bHarf and kHarf and rakam and noktalama # True ya da False olarak sonuç döner
 sifreKontrol("sO2F591")
+
 # %%
 from string import ascii_lowercase,ascii_uppercase,digits,punctuation
 def sifreKontrol(password):
@@ -324,7 +330,9 @@ def sifreUret(uzunluk):
         return sifre
     # şifre dışarıya aktarılıyor
 sifreUret(4)
-# %% [markdown]
+
+# %%
+
 """
 TC Kimlik No Doğrulama Algoritması
 Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması gerekiyor.
@@ -341,6 +349,7 @@ Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması ger
 
 5  İlk 10 hanenin toplamından elde edilen sonucun 10’a bölümünden kalan sayı (MOD10) 11. basamaktaki sayıyı vermelidir.
 """
+
 # %%
 # tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
 tckimlikNo = "10000000146"
@@ -384,6 +393,7 @@ def tcKimlikKontrol(tckimlikNo:str)->bool:
                         return True
     return False
 tcKimlikKontrol(tckimlikNo)
+
 # %%
 def tcKimlikKontrol(tckimlikNo:str)->bool:
     if len(tckimlikNo) == 11:
@@ -400,4 +410,20 @@ def tcKimlikKontrol(tckimlikNo:str)->bool:
     return False
 tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
 tcKimlikKontrol(tckimlikNo)
+
+# %% [markdown]
+# ## recursion => Özyineleme
+
 # %%
+def metinAl(metin):
+    if len(metin) == 1:
+        print(metin)
+    else:
+        print(metin)
+        metinAl(metin[1:]) ####
+metinAl("TURK")
+
+# %%
+
+
+
