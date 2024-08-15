@@ -72,3 +72,6 @@ Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması ger
 
 5  İlk 10 hanenin toplamından elde edilen sonucun 10’a bölümünden kalan sayı (MOD10) 11. basamaktaki sayıyı vermelidir.
 """
+
+
+tckimlikNo = "10000000146"

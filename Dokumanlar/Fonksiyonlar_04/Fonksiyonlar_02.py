@@ -324,4 +324,80 @@ def sifreUret(uzunluk):
         return sifre
     # şifre dışarıya aktarılıyor
 sifreUret(4)
+# %% [markdown]
+"""
+TC Kimlik No Doğrulama Algoritması
+Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması gerekiyor.
+
+1  TC Kimlik Numaraları 11 karakter olmak zorundadır.
+
+2  Her hanesi bir rakam olmaldır.
+
+3  İlk hanesi 0 (sıfır) olamaz
+
+4  1, 3, 5, 7, 9 basamaklarının toplamının 7 katından, 
+2, 4, 6, 8 basamaklarının toplamını çıkarttığımızda elde ettiğimiz sonucun 
+10’a bölümünden kalan sayı (MOD10)  10. basamaktaki sayıyı vermelidir.
+
+5  İlk 10 hanenin toplamından elde edilen sonucun 10’a bölümünden kalan sayı (MOD10) 11. basamaktaki sayıyı vermelidir.
+"""
+# %%
+# tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
+tckimlikNo = "10000000146"
+
+if len(tckimlikNo) == 11:
+    if tckimlikNo.isdigit():
+        tcList = list(map(int,tckimlikNo))
+        if tcList[0] != 0:
+            # 1 3 5 7 9 => 0 2 4 6 8 => range(0,9,2) => 0 2 4 6 8
+            sayi1List = [tcList[i] for i in range(0,9,2)]
+            sayi2List = [tcList[i] for i in range(1,8,2)]
+            if (sum(sayi1List)*7 - sum(sayi2List))%10 == tcList[9]:
+                sayiList = [tcList[i] for i in range(10)]
+                if sum(sayiList) % 10 == tcList[10]:
+                    print("Doğru")
+                else:
+                    print("Hata 5")
+            else:
+                print("Hata 4")
+        else:
+            print("Hata 3")
+    else:
+        print("Hata 2")
+else:
+    print("Hata 1")
+
+# %%
+# tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
+tckimlikNo = "10000000146"
+def tcKimlikKontrol(tckimlikNo:str)->bool:
+    if len(tckimlikNo) == 11:
+        if tckimlikNo.isdigit():
+            tcList = list(map(int,tckimlikNo))
+            if tcList[0] != 0:
+                # 1 3 5 7 9 => 0 2 4 6 8 => range(0,9,2) => 0 2 4 6 8
+                sayi1List = [tcList[i] for i in range(0,9,2)]
+                sayi2List = [tcList[i] for i in range(1,8,2)]
+                if (sum(sayi1List)*7 - sum(sayi2List))%10 == tcList[9]:
+                    sayiList = [tcList[i] for i in range(10)]
+                    if sum(sayiList) % 10 == tcList[10]:
+                        return True
+    return False
+tcKimlikKontrol(tckimlikNo)
+# %%
+def tcKimlikKontrol(tckimlikNo:str)->bool:
+    if len(tckimlikNo) == 11:
+        if tckimlikNo.isdigit():
+            tcList = list(map(int,tckimlikNo))
+            if tcList[0] != 0:
+                # 1 3 5 7 9 => 0 2 4 6 8 => range(0,9,2) => 0 2 4 6 8
+                sayi1List = [tcList[i] for i in range(0,9,2)]
+                sayi2List = [tcList[i] for i in range(1,8,2)]
+                if (sum(sayi1List)*7 - sum(sayi2List))%10 == tcList[9]:
+                    sayiList = [tcList[i] for i in range(10)]
+                    if sum(sayiList) % 10 == tcList[10]:
+                        return True
+    return False
+tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
+tcKimlikKontrol(tckimlikNo)
 # %%

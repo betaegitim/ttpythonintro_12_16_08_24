@@ -47,18 +47,6 @@ def sifreUret(uzunluk): # fonksiyon tanımlanıyor. uzunluk şifre uzunluğunu 
 
 
 """
-
-TC Kimlik No Doğrulama Algoritması
-TC Kimlik numaraları, her Türk Vatandaşına doğumunda verilen 11 karakterli bir sayıdır ve benzersizdir. 
-Yani aynı TC Kimlik numarasından bir tane daha yoktur. Ben önceleri hep bir sıraya göre gittiklerini düşünüyordum. 
-Ancak bir gün ailemden iki kişinin TC Kimlik numaraların benzerlik gösterdiğini fark ettim. 
-Bu benzerlik ilk 1,2,3 hane ile 7,8,9 hanelerin aynı olmasıydı. 
-O gün aslında sıradan gitmediğini belirli bir algoritmaya göre verildiğini anlamıştım.
-
-Şimdi gelelim bu TC No Doğrulama algoritmasına.
-
-
-
 TC Kimlik No Doğrulama Algoritması
 Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması gerekiyor.
 
@@ -68,7 +56,27 @@ Bu algoritma 5 adımlı yani 5 şart var. Bu 5 şartın hepsine de uyulması ger
 
 3  İlk hanesi 0 (sıfır) olamaz
 
-4  1, 3, 5, 7, 9 basamaklarının toplamının 7 katından, 2, 4, 6, 8 basamaklarının toplamını çıkarttığımızda elde ettiğimiz sonucun 10’a bölümünden kalan sayı (MOD10)  10. basamaktaki sayıyı vermelidir.
+4  1, 3, 5, 7, 9 basamaklarının toplamının 7 katından, 
+2, 4, 6, 8 basamaklarının toplamını çıkarttığımızda elde ettiğimiz sonucun 
+10’a bölümünden kalan sayı (MOD10)  10. basamaktaki sayıyı vermelidir.
 
 5  İlk 10 hanenin toplamından elde edilen sonucun 10’a bölümünden kalan sayı (MOD10) 11. basamaktaki sayıyı vermelidir.
+
 """
+
+
+def tcKimlikKontrol(tckimlikNo:str)->bool:
+    if len(tckimlikNo) == 11:
+        if tckimlikNo.isdigit():
+            tcList = list(map(int,tckimlikNo))
+            if tcList[0] != 0:
+                # 1 3 5 7 9 => 0 2 4 6 8 => range(0,9,2) => 0 2 4 6 8
+                sayi1List = [tcList[i] for i in range(0,9,2)]
+                sayi2List = [tcList[i] for i in range(1,8,2)]
+                if (sum(sayi1List)*7 - sum(sayi2List))%10 == tcList[9]:
+                    sayiList = [tcList[i] for i in range(10)]
+                    if sum(sayiList) % 10 == tcList[10]:
+                        return True
+    return False
+tckimlikNo = input("T.C. Kimlik Numaranızı Giriniz:")
+tcKimlikKontrol(tckimlikNo)
