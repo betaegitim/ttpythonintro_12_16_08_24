@@ -11,3 +11,4 @@ for item in liste:
         shutil.copy(os.path.join("Egzersizler","cevaplar",fileName),os.path.join("Egzersizler",item,f"{item}_{fileName}"))
     else:
         open(os.path.join("Egzersizler",item,fileName),"w+")
+
