@@ -4,7 +4,7 @@ Linkler:
 
 * repl.it
 * https://www.sololearn.com/en/learn/courses/le-python
-* 
+* https://theresanaiforthat.com/setup/#main
 
 Kurulum Esnasında 
 * pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org <package_name>

@@ -2,7 +2,7 @@ liste = ["cengiz","ahmet","aysen","ceyda","dogacan","merve","gunhan","oguz","onu
 import os
 import shutil
 # os.mkdir("Egzersizler")
-fileName = "Egzersiz05.py"
+fileName = "Egzersiz0601.py"
 status = 1
 for item in liste:
     if not os.path.exists(os.path.join("Egzersizler",item)):
