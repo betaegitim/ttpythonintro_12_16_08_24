@@ -122,9 +122,10 @@ c = Cokgen(4,"Kare")
 a.tip,b.tip,c.tip
 
 # %% [markdown]
-# -------------------
-# Don't Repeat Yourself
-# ---------------------------
+# * Encapsulation => Kapsülleme
+# * Inheritance => Kalıtım
+# * Polymorphism => Çok Biçimlilik
+# * Abstraction => Soyutlama
 
 # %%
 
